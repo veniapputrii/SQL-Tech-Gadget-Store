@@ -1,5 +1,5 @@
 # SQL-Tech-Gadget-Store
-<p> **✨ TASK ✨**</p>
+<p> <b>✨ TASK ✨</b></p>
 
 **1. String Manipulation**: Can you extract just the domain name (e.g., "gmail.com") from the email_address and list the top 3 most common email providers among these 40 users?
 
