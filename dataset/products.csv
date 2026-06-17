@@ -1,0 +1,11 @@
+"product_id","sku","product_name","unit_price","unit_cost"
+1,"LAP-X1-BLK","Laptop Pro X1",1200.00,800.00
+2,"PHO-Z9-SLV","Smartphone Z9",800.00,500.00
+3,"TAB-M4-WHT","Tablet M4",400.00,250.00
+4,"ACC-M1-BLK","Wireless Mouse",25.00,10.00
+5,"ACC-K1-RGB","Mech Keyboard",85.00,40.00
+6,"AUD-E2-WHT","Earbuds E2",150.00,75.00
+7,"MON-U4-BLK","Ultrawide Monitor",350.00,200.00
+8,"LAP-X2-SLV","Laptop Air X2",999.00,650.00
+9,"ACC-C3-GRY","USB-C Hub",45.00,15.00
+10,"AUD-H9-BLK","Over-Ear Headphones",250.00,120.00
