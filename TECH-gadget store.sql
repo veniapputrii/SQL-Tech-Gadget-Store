@@ -154,3 +154,4 @@ LIMIT 3;
 --✨ Date Math--
 select * from users;
 --Join the table
+select * from users join sales using (user_id);
