@@ -1,3 +1,5 @@
+
+
 CREATE TABLE products (
     product_id INT PRIMARY KEY,
     sku VARCHAR(20), 
@@ -136,3 +138,19 @@ INSERT INTO sales (sale_id, user_id, product_id, sale_timestamp, quantity, disco
 (145, 25, 2, '2026-06-25 08:15:00', 1, 0.00), (146, 26, 9, '2026-02-18 13:05:00', 2, 0.10),
 (147, 27, 5, '2026-04-02 17:30:00', 1, 0.00), (148, 28, 1, '2026-06-12 10:50:00', 1, 0.15),
 (149, 29, 7, '2026-01-28 14:25:00', 1, 0.00), (150, 30, 3, '2026-03-10 09:00:00', 3, 0.25);
+
+Select * from users;
+
+--TASK
+--✨ String Manipulation--
+select
+	Split_part(email_address, '@', 2) as email_domain,
+	count(*) as user_count
+from users
+group by email_domain
+order by user_count DESC
+LIMIT 3;
+
+--✨ Date Math--
+select * from users;
+--Join the table
