@@ -153,5 +153,25 @@ LIMIT 3;
 
 --✨ Date Math--
 select * from users;
+select * from users;
 --Join the table
-select * from users join sales using (user_id);
+--select * from users join sales using (user_id);
+with user_purchase as (
+	select
+		users.user_id,
+		MIN(sales.sale_timestamp)::date - users.signup_date as days_to_purchase
+	from users
+	join sales on users.user_id = sales.user_id
+	group by users.user_id, users.signup_date
+)
+select
+upd.user_id,
+upd.days_to_purchase,
+s.sale_id,
+s.sale_timestamp,
+s.product_id
+from user_purchase upd
+inner join sales s on upd.user_id = s.user_id
+order by s.sale_id ASC;
+
+--✨ Complex Math --
