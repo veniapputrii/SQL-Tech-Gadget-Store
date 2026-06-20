@@ -175,3 +175,27 @@ inner join sales s on upd.user_id = s.user_id
 order by s.sale_id ASC;
 
 --✨ Complex Math --
+--select * from sales;
+--with profit as (
+--select * 
+--from sales 
+--inner join products using (product_id)
+--)
+--select * from profit;
+
+create temp table profit as 
+	select *
+	from sales
+	inner join products using (product_id);
+select * from profit;
+
+Alter table profit
+	drop column if exists sale_timestamp,
+	drop column if exists product_name,
+	drop column if exists user_id;
+
+select * from profit;
+Select
+	SUM ((unit_price * (1 - discount_applied) - unit_cost) * quantity) as total_laptop_profit
+from profit
+where sku in ('LAP-X1-BLK', 'LAP-X2-SLV');
