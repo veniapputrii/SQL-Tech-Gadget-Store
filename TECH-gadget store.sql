@@ -195,7 +195,26 @@ Alter table profit
 	drop column if exists user_id;
 
 select * from profit;
-Select
+Select 
 	SUM ((unit_price * (1 - discount_applied) - unit_cost) * quantity) as total_laptop_profit
 from profit
 where sku in ('LAP-X1-BLK', 'LAP-X2-SLV');
+
+-- ✨ Complex Aggregation --
+
+create temp table highest_quantity as
+	select 
+	user_id,
+	SUM(quantity) as highest_total_quantity
+from sales
+
+group by 
+	user_id
+
+order by
+	highest_total_quantity DESC
+limit 3;
+select * from highest_quantity;
+select
+
+
