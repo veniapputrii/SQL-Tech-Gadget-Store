@@ -211,10 +211,18 @@ from sales
 group by 
 	user_id
 
+
+select * from highest_quantity;
+select
+highest_quantity.user_id,
+highest_quantity.highest_total_quantity,
+users.user_id,
+users.full_name
+from highest_quantity
+
+inner join users on highest_quantity = users.user_id
+group by user_id
+
 order by
 	highest_total_quantity DESC
 limit 3;
-select * from highest_quantity;
-select
-
-
